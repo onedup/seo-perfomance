@@ -44,7 +44,7 @@ const watcher = () => {
 }
 
 const deployGhPages = () => {
-  return src("./app/**/*")
+  return gulp.src("./app/**/*")
   .pipe(ghPages());
 };
 
@@ -59,6 +59,7 @@ const zip = zipFiles;
 export { dev }
 export { build }
 export { backend }
+export { deploy }
 export { cache }
 export { zip }
 

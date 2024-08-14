@@ -10,6 +10,7 @@
     "code": "editorconfig-checker",
     "dev": "gulp",
     "build": "npm run stylelint && npm run code && gulp build --build",
+    "deploy": "gulp deploy",
     "cache": "gulp cache",
     "backend": "gulp backend",
     "zip": "gulp zip --build"

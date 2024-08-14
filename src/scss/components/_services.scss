@@ -1,0 +1,140 @@
+.services {
+  padding-top: 68px;
+  padding-bottom: 44px;
+
+  &__container {
+    position: relative;
+    background-image: url("../img/bg/services-bg.webp");
+    background-position: top center;
+    background-size: 640px 259px;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 120px;
+  }
+
+  &__slide {
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 561px;
+    height: 410px;
+    backdrop-filter: blur(20px);
+    background: var(--blue-75);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--white);
+  }
+
+  &-slide {
+    &__text {
+      margin-bottom: auto;
+    }
+
+    &__title {
+      margin: 0;
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+
+    &__descr {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      margin: 0;
+      padding-left: 26px;
+    }
+
+    &__links {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__price-link {
+      border-radius: 20px;
+      padding: 8px 16px;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      background-color: var(--white);
+      transition: var(--main-trs);
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--black);
+      }
+    }
+
+    &__arrow-link {
+      display: block;
+      transition: var(--main-trs);
+      color: var(--white);
+
+      & svg path {
+        stroke: currentColor;
+      }
+
+      &:hover {
+        color: var(--black);
+      }
+    }
+
+    &__price-link,
+    &__arrow-link {
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        outline: var(--outline);
+        outline-offset: var(--outline-offset);
+      }
+    }
+  }
+
+  &-swiper-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 30px;
+
+    & svg path {
+      stroke: currentColor;
+    }
+
+    &__prev,
+    &__next {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      border: 2px solid var(--black);
+      color: var(--black);
+      cursor: pointer;
+
+      &.swiper-button-disabled {
+        border: 2px solid var(--black-40);
+        color: var(--black-40);
+        cursor: default;
+      }
+    }
+  }
+}

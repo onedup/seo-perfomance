@@ -1,0 +1,45 @@
+.promotion {
+  position: relative;
+  padding-top: 162px;
+  padding-bottom: 462px;
+  background: url("../img/bg/promotion-bg-1.webp") no-repeat 25% 85%, url("../img/bg/promotion-bg-2.webp") no-repeat 70% 96%;
+
+  &__container {
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: var(--container-width);
+      height: 1px;
+      background-color: var(--black-20);
+    }
+  }
+
+  &__title {
+    grid-column: 6 span;
+  }
+
+  &__content {
+    grid-column: 6 span;
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--black);
+
+      &:not(:last-of-type) {
+        margin-bottom: 38px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 80px;
+      }
+  } 
+
+  
+}

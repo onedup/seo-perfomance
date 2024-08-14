@@ -6,7 +6,7 @@
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-  --main-trs: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  --main-trs: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
 
   --outline: 2px dashed currentColor;
   --outline-offset: 2px;
