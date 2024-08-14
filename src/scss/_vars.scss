@@ -1,0 +1,28 @@
+:root {
+  // base
+  --font-family: "Hero New", sans-serif;
+  --second-family: "Poppins", sans-serif;
+  --content-width: 1240px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --main-trs: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+  --outline: 2px dashed currentColor;
+  --outline-offset: 2px;
+
+  // colors
+  --backgound: #f2f7ff;
+  --yellow: #ffc702;
+  --black: #2c2c2c;
+  --white: #f7f7f7;
+  --dark-blue: #15007f;
+  --blue: #4a5fe6;
+  --blue-20: rgba(0, 54, 246, 0.2);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --black-20: rgba(4, 4, 4, 0.2);
+  --blue-75: rgba(0, 62, 183, 0.75);
+  --black-40: rgba(44, 44, 44, 0.4);
+  --background: #f5f4fb;
+  --blue: #4a5fe6;
+}
