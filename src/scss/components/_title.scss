@@ -11,6 +11,11 @@
 
   &--theme-dark {
     color: var(--black);
-    background-image: url("../img/title-lightning-bolt.webp");
+    background-image: url("../img/title-lightning-bolt-dark.webp");
+  }
+
+  &--theme-light {
+    color: var(--white);
+    background-image: url("../img/title-lightning-bolt-light.webp");
   }
 }
