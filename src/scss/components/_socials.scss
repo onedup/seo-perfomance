@@ -1,0 +1,21 @@
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: var(--outline);
+      outline-color: var(--white);
+      outline-offset: var(--outline-offset);
+    }
+  }
+}
