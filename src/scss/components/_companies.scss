@@ -1,0 +1,36 @@
+.companies {
+  padding-top: 180px;
+  padding-bottom: 120px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 60px;
+    font-weight: 600;
+      font-size: 56px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: var(--black);
+  }
+
+  &__swiper {
+    margin-bottom: 30px;
+  }
+
+  & .swiper-slide {
+    display: flex;
+    height: 152px;
+    width: auto !important;
+  }
+
+  &__image {
+    align-self: center;
+    max-height: 152px;
+    flex-grow: 0;
+    filter: grayscale(100%);
+  }
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear;
+}

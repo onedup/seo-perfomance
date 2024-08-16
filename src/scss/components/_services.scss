@@ -134,6 +134,23 @@
         border: 2px solid var(--black-40);
         color: var(--black-40);
         cursor: default;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        outline: var(--outline);
+        outline-offset: var(--outline-offset);
       }
     }
   }
