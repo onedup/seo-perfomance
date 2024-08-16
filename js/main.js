@@ -14,6 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_services_swiper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/services-swiper.js */ "./src/js/components/services-swiper.js");
 /* harmony import */ var _components_spoiler_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/spoiler.js */ "./src/js/components/spoiler.js");
 /* harmony import */ var _components_companies_sliders_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/companies-sliders.js */ "./src/js/components/companies-sliders.js");
+/* harmony import */ var _components_form_submit_checkbox_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/form-submit-checkbox.js */ "./src/js/components/form-submit-checkbox.js");
+
 
 
 
@@ -58,6 +60,35 @@ const companiesSliderRevert = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]
     delay: 1,
     reverseDirection: true
   }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/form-submit-checkbox.js":
+/*!***************************************************!*\
+  !*** ./src/js/components/form-submit-checkbox.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+document.addEventListener('DOMContentLoaded', function () {
+  const requestPlanForm = document.querySelector("#request_plan");
+  const requestPlanCheckbox = requestPlanForm.querySelector('#privacy_policy');
+  const requestPlanSubmitButton = requestPlanForm.querySelector('.form__btn');
+
+  // Функция для обновления состояния кнопки
+  function updateButtonState() {
+    requestPlanSubmitButton.disabled = !requestPlanCheckbox.checked;
+  }
+  // Вызываем функцию при загрузке страницы
+  updateButtonState();
+  requestPlanCheckbox.addEventListener('change', updateButtonState);
+  requestPlanForm.addEventListener('submit', function (event) {
+    if (!requestPlanCheckbox.checked) {
+      event.preventDefault();
+      alert('Пожалуйста, подтвердите согласие с политикой конфиденциальности');
+    }
+  });
 });
 
 /***/ }),
