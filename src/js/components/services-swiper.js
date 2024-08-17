@@ -4,7 +4,7 @@ import { Navigation } from 'swiper/modules';
 
 const servicesSwiper = new Swiper('.services__swiper', {
   modules: [Navigation],
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 30,
   keyboard: {
     enabled: true,
@@ -13,7 +13,11 @@ const servicesSwiper = new Swiper('.services__swiper', {
     nextEl: '.services-swiper-button__next',
     prevEl: '.services-swiper-button__prev',
   },
-  
+  breakpoints: {
+    1100: {
+      slidesPerView: 2,
+    }
+  }
 });
 
 // Получаем ссылки на кнопки

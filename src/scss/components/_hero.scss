@@ -3,6 +3,11 @@
   padding-top: 174px;
   padding-bottom: 240px;
 
+  @include small-desktop {
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+
   &__container {
     position: relative;
     display: flex;
@@ -19,6 +24,11 @@
     line-height: 1;
     letter-spacing: -0.02em;
     color: var(--black);
+
+    @include small-desktop {
+      max-width: 700px;
+      font-size: 76px;
+    }
   }
 
   &__descr {
@@ -37,26 +47,82 @@
     &--1 {
       top: -42%;
       right: 32%;
+
+      @include small-desktop {
+        top: -37%;
+      }
+
+      @include tablet {
+        top: -27%;
+        right: 23%;
+      }
     }
 
     &--2 {
       top: -40%;
       right: 1%;
+
+      @include small-desktop {
+        top: -35%;
+        right: 8%;
+      }
+
+      @include tablet {
+        right: -8%;
+      }
     }
 
     &--3 {
       top: 30%;
       right: 28%;
+
+      @include small-desktop {
+        top: 24%;
+      }
+
+      @include tablet {
+        right: 15%;
+      }
     }
 
     &--4 {
       top: 27%;
       right: 7%;
+
+      @include small-desktop {
+        top: 24%;
+        right: 13%;
+      }
+
+      @include tablet {
+        right: 0%;
+      }
     }
 
     &--5 {
       bottom: -45%;
       right: 1%;
+
+      @include small-desktop {
+        bottom: -8%;
+        right: 11%;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--1,
+    &--2,
+    &--3,
+    &--4,
+    &--5 {
+      & img {
+        @include small-desktop {
+          width: 60%;
+        }
+      }
     }
   }
 }

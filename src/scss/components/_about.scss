@@ -1,6 +1,10 @@
 .about {
   padding: 160px 0;
 
+  @include small-desktop {
+    padding: 80px 0;
+  }
+
   &__title,
   &__descr,
   &__list {
@@ -9,6 +13,10 @@
 
   &__title {
     margin-bottom: 60px;
+
+    @include small-desktop {
+      margin-bottom: 30px;
+    }
   }
 
   &__text {
@@ -23,11 +31,15 @@
     color: black;
     background-color: var(--background);
 
+
+
     &-wrapper {
       position: relative;
       grid-column: span 12;
       margin-bottom: 120px;
-
+@include small-desktop {
+          margin-bottom: 60px;
+  }
     }
 
     &-bg {
@@ -43,6 +55,10 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+
+    @include small-desktop {
+      font-size: 46px;
+    }
   }
 
   &__descr {
@@ -53,6 +69,10 @@
     line-height: 1.2;
     letter-spacing: -0.02em;
     color: var(--black);
+
+    @include small-desktop {
+        margin-bottom: 60px;
+      }
   }
 
   &__list {

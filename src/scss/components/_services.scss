@@ -8,10 +8,18 @@
     background-position: top center;
     background-size: 640px 259px;
     background-repeat: no-repeat;
+
+    @include tablet {
+      background-size: 467px 189px;
+    }
   }
 
   &__title {
     margin-bottom: 120px;
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
   }
 
   &__slide {

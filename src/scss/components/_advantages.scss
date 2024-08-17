@@ -1,9 +1,14 @@
 .advantages {
   padding: 120px 0;
+
   background-image: url("../img/bg/advantages-bg.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include small-desktop {
+    padding: 60px 0;
+  }
 
   &__title {
     margin-bottom: 60px;
@@ -27,6 +32,28 @@
     background: var(--black-20);
     color: var(--white);
     transition: var(--main-trs);
+
+    &:nth-child(odd) {
+      @include small-desktop {
+        grid-column: 2 / span 5;
+      }
+
+      @include tablet {
+        grid-column: 1 / span 6;
+      }
+    }
+
+    &:nth-child(even) {
+      @include small-desktop {
+        grid-column: 7 / span 5;
+      }
+
+      @include tablet {
+        grid-column: 7 / span 6;
+      }
+    }
+
+    
 
   }
 
@@ -63,15 +90,16 @@
         fill: currentColor;
       }
     }
-     @media (any-hover: hover) {
+
+    @media (any-hover: hover) {
       &:hover {
         background-color: var(--yellow);
         color: var(--black);
       }
 
-            &:hover > &__top:before {
-              background-color: var(--black);
-            }
+      &:hover>&__top:before {
+        background-color: var(--black);
+      }
     }
   }
 

@@ -26,6 +26,10 @@
     &:hover {
       opacity: 1;
     }
+
+    @include tablet {
+      opacity: 1;
+    }
   }
 
   &__img {
