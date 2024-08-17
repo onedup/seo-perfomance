@@ -34,7 +34,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -87,15 +88,94 @@ a {
 }
 
 .dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  overscroll-behavior: none;
+  overflow-y: hidden;
 }
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 88;
+  background-color: rgba(#000, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.burger {
+  position: relative;
+  z-index: 1000;
+  width: 30px;
+  height: 20px;
+  display: none;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+    transition: transform 0.2s ease, top 0.3s ease;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @include tablet {
+    & {
+      display: block;
+    }
+  }
+
+  &--active {
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease, top 0.3s ease;
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease, top 0.3s ease;
+    }
+  }
+
+  &--active &__line {
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:focus::after {
+    opacity: 1;
+  }
 }

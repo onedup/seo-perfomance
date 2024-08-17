@@ -1,18 +1,47 @@
+
 <header class="header">
   <div class="container header__container">
     <a class="logo" href="/">
       <img src="img/logo.webp" alt="Seo Perfomance Logo">
     </a>
-    <div class="nav">
+    <nav class="nav">
       <ul class="list-reset nav__list">
         <li class="nav__item">
           <a class="nav__link nav__link--active" href="/">Главная</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Услуги</a>
+          <a class="nav__link nav__link--drop" href="#">Услуги</a>
+          <div class="dropdown-container">
+            <ul class="list-reset nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back"><a href=""
+                  class="nav__link dropdown-list__link mobile-back__link">Назад</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Как выбрать товар</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Подбор по фото</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Владельцам бизнеса</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Отзывы</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Оптом</a></li>
+            </ul>
+              <button class="btn-reset dropdown-close">
+                Закрыть
+              </button>
+          </div>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Кейсы</a>
+          <a class="nav__link nav__link--drop" href="#">Кейсы</a>
+          <div class="dropdown-container">
+            <ul class="list-reset nav__list nav__list--dropdown dropdown-list dropdown-list--active">
+              <li class="dropdown-list__item mobile-back"><a href=""
+                  class="nav__link dropdown-list__link mobile-back__link">Назад</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Как выбрать товар</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Подбор по фото</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Владельцам бизнеса</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Отзывы</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Оптом</a></li>
+            </ul>
+              <button class="btn-reset dropdown-close">
+                Закрыть
+              </button>
+          </div>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#">Команда</a>
@@ -27,6 +56,10 @@
           <a class="nav__link" href="#">Партнерам</a>
         </li>
       </ul>
-    </div>
+    </nav>
+    <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false">
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
+<div class="overlay"></div>

@@ -1,6 +1,10 @@
 .logo {
   text-decoration: none;
 
+  & img {
+    display: block;
+  }
+
   &:focus {
     outline: none;
   }
