@@ -15,21 +15,50 @@
 
 <body class="page__body">
   <div class="site-container">
-    <header class="header">
+
+<header class="header">
   <div class="container header__container">
     <a class="logo" href="/">
       <img src="img/logo.webp" alt="Seo Perfomance Logo">
     </a>
-    <div class="nav">
+    <nav class="nav">
       <ul class="list-reset nav__list">
         <li class="nav__item">
           <a class="nav__link nav__link--active" href="/">Главная</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Услуги</a>
+          <a class="nav__link nav__link--drop" href="#">Услуги</a>
+          <div class="dropdown-container">
+            <ul class="list-reset nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back"><a href=""
+                  class="nav__link dropdown-list__link mobile-back__link">Назад</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Как выбрать товар</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Подбор по фото</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Владельцам бизнеса</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Отзывы</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Оптом</a></li>
+            </ul>
+              <button class="btn-reset dropdown-close">
+                Закрыть
+              </button>
+          </div>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Кейсы</a>
+          <a class="nav__link nav__link--drop" href="#">Кейсы</a>
+          <div class="dropdown-container">
+            <ul class="list-reset nav__list nav__list--dropdown dropdown-list dropdown-list--active">
+              <li class="dropdown-list__item mobile-back"><a href=""
+                  class="nav__link dropdown-list__link mobile-back__link">Назад</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Как выбрать товар</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Подбор по фото</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Владельцам бизнеса</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Отзывы</a></li>
+              <li class="dropdown-list__item"><a href="" class="nav__link dropdown-list__link">Оптом</a></li>
+            </ul>
+              <button class="btn-reset dropdown-close">
+                Закрыть
+              </button>
+          </div>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#">Команда</a>
@@ -44,10 +73,13 @@
           <a class="nav__link" href="#">Партнерам</a>
         </li>
       </ul>
-    </div>
+    </nav>
+    <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false">
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
-
+<div class="overlay"></div>
     <main class="main">
       <section class="hero">
   <div class="container hero__container">
@@ -208,7 +240,14 @@
       </p>
       <a class="btn promotion__btn" href="#">Заказать услугу</a>
     </div>
+    <div class="promotion__bg-1">
+      <img src="img/bg/promotion-bg-1.webp" aria-hidden="true" alt="">
+    </div>
+    <div class="promotion__bg-2">
+      <img src="img/bg/promotion-bg-2.webp" aria-hidden="true" alt="">
+    </div>
   </div>
+
 </section>
       <section class="stages">
   <div class="container stages__container">
@@ -372,7 +411,7 @@
       <section class="advantages">
   <div class="container advantages__container">
     <h2 class="title title--theme-light advantages__title">Преимущества работы с нами</h2>
-    <ul class="list-reset advantages__list grid">
+    <ul class="list-reset advantages__list">
       <li class="advantages__item advantages-item">
         <div class="advantages-item__top">
           <div class="advantages-item__bg">
@@ -648,7 +687,7 @@
         <path d="M1 16L16 1M16 1V11.7463M16 1H4.64286" stroke-width="2" stroke-linecap="round" />
       </svg></a>
     </div>
-    <ul class="list-reset cases__list grid">
+    <ul class="list-reset cases__list">
       <li class="cases__item">
         <div class="cases__labels">
           <span class="cases__label">Базовое SEO</span>
