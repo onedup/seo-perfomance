@@ -54,7 +54,9 @@ menu.addEventListener('click', e => {
     e.preventDefault();
     const dropdownContainer = e.target.closest('.nav__item').querySelector('.dropdown-container');
     dropdownContainer.classList.add('active');
-    toggleScroll();
+    if (!document.body.classList.contains('dis-scroll')) {
+      toggleScroll();
+    }
     if (!burger.classList.contains('burger--active')) {
       overlay.classList.add('overlay--active');
       overlay.style.top = `${headerHeight}px`;
@@ -68,6 +70,9 @@ menu.addEventListener('click', e => {
   if (e.target.classList.contains('mobile-back__link')) {
     e.preventDefault();
     e.target.closest('.dropdown-container').classList.remove('active');
+    if (!burger.classList.contains('burger--active')) {
+      toggleScroll();
+    }
   }
 });
 document.addEventListener('click', e => {
@@ -75,12 +80,13 @@ document.addEventListener('click', e => {
   if (shouldCloseMenu) {
     if (burger.classList.contains('burger--active')) {
       toggleMenu();
+    } else {
+      toggleScroll();
     }
     document.querySelectorAll('.dropdown-container.active').forEach(container => {
       container.classList.remove('active');
     });
     overlay.classList.remove('overlay--active');
-    toggleScroll();
   }
 });
 
@@ -230,7 +236,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const servicesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.services__swiper', {
   modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 30,
   keyboard: {
     enabled: true
@@ -240,8 +246,12 @@ const servicesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.serv
     prevEl: '.services-swiper-button__prev'
   },
   breakpoints: {
+    568: {
+      centeredSlides: true
+    },
     1100: {
-      slidesPerView: 2
+      slidesPerView: 2,
+      centeredSlides: false
     }
   }
 });
