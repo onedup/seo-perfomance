@@ -46,6 +46,9 @@ const toggleMenu = () => {
   burger.classList.toggle('burger--active');
   menu.classList.toggle('nav--active');
   overlay.classList.toggle('overlay--active');
+  document.querySelectorAll('.dropdown-container.active').forEach(container => {
+    container.classList.remove('active');
+  });
   toggleScroll();
 };
 burger.addEventListener('click', toggleMenu);
